@@ -1,0 +1,9 @@
+FROM python:2-alpine
+RUN pip install paho-mqtt pycgminer
+ENV MQTT_PORT=1883 \
+    MQTT_HOST=localhost \
+    MQTT_PASS=TOKEN \
+    CGMINER_HOST=localhost \
+    CGMINER_PORT=4028
+CMD ["python", "main.py"]
+ADD *.py ./
