@@ -1,5 +1,5 @@
 FROM arm32v6/python:2-alpine3.7
-RUN pip install paho-mqtt pycgminer
+RUN pip install paho-mqtt pycgminer cayenne-mqtt
 ENV MQTT_PORT=1883 \
     MQTT_HOST=localhost \
     MQTT_PASS=TOKEN \
